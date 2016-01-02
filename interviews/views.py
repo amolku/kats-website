@@ -1,5 +1,11 @@
+""" Interviews views """
+
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Interview
 
 # Create your views here.
+
 def post_list(request):
-    return render(request, 'interviews/post_list.html', {})
+    interviews = Interview.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'interviews/post_list.html', {'interviews':interviews})

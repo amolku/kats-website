@@ -1,0 +1,23 @@
+<!-- Interviews post_list.html -->
+
+<!-- Blog Post List -->
+
+<html>
+    <head>
+        <title>Kat's Interviews</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Interviews</a></h1>
+        </div>
+
+        {% for interview in interviews %}
+            <div>
+                <p>published: {{ interview.published_date }}</p>
+                <h1><a href="">{{ interview.title }}</a></h1>
+                <img src = "{{ interview.picture.url }}" />
+                <p>{{ interview.text|linebreaks }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
