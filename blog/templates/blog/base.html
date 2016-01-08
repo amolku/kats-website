@@ -1,0 +1,57 @@
+<!-- base html for blog post-list -->
+
+<!-- Blog Post List -->
+
+{% load staticfiles %} 
+
+<html>
+    <head>
+        <title>Kat's Website</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    </head>
+        
+    <body>
+        <!-- BOOTSTRAP START -->
+        <div class="page-header">
+            <h1><a href="/">Kat's Website</a></h1>
+        </div>
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div>
+              <ul class="nav navbar-nav">
+                <li><a href="/">Blog</a></li>
+                <li><a href="/interviews/">Interviews</a></li>
+                <li><a href="/about/">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+        <!-- BOOTSTRAP END -->
+
+        <!-- 
+        <div class="page-header">
+            <h1><a href="/">Kat's Blog</a></h1>
+        </div>
+        -->
+
+
+        <div class=""
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

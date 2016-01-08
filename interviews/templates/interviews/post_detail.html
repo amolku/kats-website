@@ -1,0 +1,16 @@
+<!-- Post detail for interviews -->
+
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if interview.published_date %}
+            <div class="date">
+                {{ interview.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ interview.title }}</h1>
+        <img class = "img-rounded" width = "100" src="{{ interview.picture.url }}" alt="...">
+        <p>{{ interview.text|linebreaks }}</p>
+    </div>
+{% endblock %}
